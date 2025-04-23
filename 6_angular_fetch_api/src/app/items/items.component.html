@@ -1,0 +1,10 @@
+<h2>Pokémon List</h2>
+<div *ngFor="let item of items" class="pokemon-card">
+  <img [src]="item.image" alt="{{ item.name }}" width="120" />
+  <h3>#{{ item.id }} - {{ item.name | titlecase }}</h3>
+  <p><strong>Base XP:</strong> {{ item.base_experience }}</p>
+  <p><strong>Height:</strong> {{ item.height }} | <strong>Weight:</strong> {{ item.weight }}</p>
+  <p><strong>Abilities:</strong> {{ item.abilities.join(', ') }}</p>
+  <p><strong>Types:</strong> {{ item.types.join(', ') }}</p>
+  <hr />
+</div>
